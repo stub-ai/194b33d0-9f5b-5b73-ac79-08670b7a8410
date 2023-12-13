@@ -3,7 +3,17 @@ import React from 'react';
 const OptimizeButton: React.FC = () => {
   const handleOptimize = () => {
     // Here you can add the logic for creating the Etsy product template
-    console.log('Optimize button clicked');
+    const productTemplate = {
+      title: 'Your Product Title',
+      description: 'Your Product Description',
+      price: 'Your Product Price',
+      quantity: 'Your Product Quantity',
+      tags: ['tag1', 'tag2', 'tag3'],
+      materials: ['material1', 'material2'],
+      // Add more fields as per your requirement
+    };
+
+    console.log('Etsy Product Template:', productTemplate);
   };
 
   return (
