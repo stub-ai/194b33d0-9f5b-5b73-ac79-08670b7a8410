@@ -5,6 +5,7 @@ import SEO from '../components/SEO';
 import Login from '../components/Login';
 import Header from '../components/Header';
 import EtsyIntegration from '../components/EtsyIntegration';
+import OptimizeButton from '../components/OptimizeButton'; // Import OptimizeButton
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,6 +21,7 @@ export default function Home() {
       <SEO productName={productName} />
       <Login />
       <EtsyIntegration />
+      <OptimizeButton /> {/* Use OptimizeButton */}
     </main>
   );
 }
