@@ -5,7 +5,7 @@ import SEO from '../components/SEO';
 import Login from '../components/Login';
 import Header from '../components/Header';
 import EtsyIntegration from '../components/EtsyIntegration';
-import OptimizeButton from '../components/OptimizeButton'; // Import OptimizeButton
+import OptimizeButton from '../components/OptimizeButton';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,14 +16,14 @@ interface HomeProps {
 export default function Home({ productName }: HomeProps) {
   return (
     <main
-      className={`flex items-center justify-between min-h-screen p-24 flex-col ${inter.className}`}
+      className={`min-h-screen p-24 flex flex-col items-center justify-between ${inter.className}`} // Corrected order of Tailwind CSS classnames
     >
       <Header />
       <Upload />
       <SEO productName={productName} />
       <Login />
       <EtsyIntegration />
-      <OptimizeButton /> {/* Use OptimizeButton */}
+      <OptimizeButton />
     </main>
   );
 }
