@@ -1,19 +1,11 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 
 const OptimizeButton: React.FC = () => {
-  const handleOptimize = () => {
-    // Here you can add the logic for creating the Etsy product template
-    const productTemplate = {
-      title: 'Your Product Title',
-      description: 'Your Product Description',
-      price: 'Your Product Price',
-      quantity: 'Your Product Quantity',
-      tags: ['tag1', 'tag2', 'tag3'],
-      materials: ['material1', 'material2'],
-      // Add more fields as per your requirement
-    };
+  const router = useRouter();
 
-    console.log('Etsy Product Template:', productTemplate);
+  const handleOptimize = () => {
+    router.push('/optimized-template');
   };
 
   return (
