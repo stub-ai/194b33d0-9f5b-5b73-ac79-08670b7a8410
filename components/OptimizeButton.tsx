@@ -50,7 +50,7 @@ const OptimizeButton: React.FC = () => {
 
   return (
     <button 
-      className="py-2 px-4 rounded text-white font-bold bg-blue-500 hover:bg-blue-700"
+      className="bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded text-white font-bold"
       onClick={handleOptimize}
     >
       Optimize
