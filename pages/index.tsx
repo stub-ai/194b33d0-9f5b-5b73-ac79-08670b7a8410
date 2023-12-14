@@ -18,7 +18,7 @@ interface HomeProps {
 export default function Home({ productName, productDescription }: HomeProps) {
   return (
     <main
-      className={`p-24 min-h-screen flex flex-col items-center justify-between ${inter.className}`}
+      className={`flex flex-col items-center justify-between p-24 min-h-screen ${inter.className}`}
     >
       <Header />
       <Upload />
