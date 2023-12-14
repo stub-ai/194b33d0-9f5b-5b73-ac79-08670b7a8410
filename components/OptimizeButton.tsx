@@ -34,7 +34,7 @@ const OptimizeButton: React.FC = () => {
 
   return (
     <button 
-      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      className="py-2 px-4 rounded text-white font-bold bg-blue-500 hover:bg-blue-700"
       onClick={handleOptimize}
     >
       Optimize
