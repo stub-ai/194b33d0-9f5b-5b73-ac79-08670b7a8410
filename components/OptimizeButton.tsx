@@ -10,7 +10,7 @@ const OptimizeButton: React.FC = () => {
 
   return (
     <button 
-      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" // Corrected order of Tailwind CSS classnames
+      className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700"
       onClick={handleOptimize}
     >
       Optimize
