@@ -2,11 +2,12 @@ import React from 'react';
 
 interface SEOProps {
   productName: string;
+  productDescription: string;
 }
 
-const SEO: React.FC<SEOProps> = ({ productName }) => {
+const SEO: React.FC<SEOProps> = ({ productName, productDescription }) => {
   const seoTitle = `${productName} | Best Product on Etsy`;
-  const seoDescription = `Buy ${productName}, the best product on Etsy. High quality, fast shipping, and great customer service.`;
+  const seoDescription = productDescription;
 
   return (
     <div>
