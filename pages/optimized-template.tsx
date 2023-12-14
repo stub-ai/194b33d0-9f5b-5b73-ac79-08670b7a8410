@@ -8,8 +8,7 @@ const OptimizedTemplate: React.FC = () => {
   return (
     <div>
       <h1>Optimized Etsy Product Template</h1>
-      <SEO productName={seoTitle} />
-      <p>{seoDescription}</p>
+      <SEO productName={seoTitle} productDescription={seoDescription} />
     </div>
   );
 };

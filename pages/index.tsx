@@ -11,16 +11,17 @@ const inter = Inter({ subsets: ['latin'] });
 
 interface HomeProps {
   productName: string;
+  productDescription: string;
 }
 
-export default function Home({ productName }: HomeProps) {
+export default function Home({ productName, productDescription }: HomeProps) {
   return (
     <main
       className={`p-24 min-h-screen flex flex-col items-center justify-between ${inter.className}`}
     >
       <Header />
       <Upload />
-      <SEO productName={productName} />
+      <SEO productName={productName} productDescription={productDescription} />
       <Login />
       <EtsyIntegration />
       <OptimizeButton />
@@ -29,12 +30,14 @@ export default function Home({ productName }: HomeProps) {
 }
 
 export async function getStaticProps() {
-  // Replace this with your actual logic to fetch product name
+  // Replace this with your actual logic to fetch product name and description
   const productName = 'Your Product Name';
+  const productDescription = 'Your Product Description';
 
   return {
     props: {
       productName,
+      productDescription,
     },
   };
 }
