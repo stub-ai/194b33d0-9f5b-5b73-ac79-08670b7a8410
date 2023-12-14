@@ -25,7 +25,7 @@ const EtsyIntegration: React.FC = () => {
       {products.map((product: any) => (
         <div key={product.listing_id}>
           <h3>{product.title}</h3>
-          <Image src={product.MainImage.url_570xN} alt={product.title} width={570} height={570} /> {/* Corrected height attribute */}
+          <Image src={product.MainImage.url_570xN} alt={product.title} width={570} height={570} />
           <p>{product.description}</p>
         </div>
       ))}
