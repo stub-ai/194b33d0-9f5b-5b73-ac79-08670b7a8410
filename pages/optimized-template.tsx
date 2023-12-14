@@ -1,10 +1,12 @@
 import React from 'react';
 import SEO from '../components/SEO';
 
-const OptimizedTemplate: React.FC = () => {
-  const seoTitle = 'Your SEO Optimized Title';
-  const seoDescription = 'Your SEO Optimized Description';
+interface OptimizedTemplateProps {
+  seoTitle: string;
+  seoDescription: string;
+}
 
+const OptimizedTemplate: React.FC<OptimizedTemplateProps> = ({ seoTitle, seoDescription }) => {
   return (
     <div>
       <h1>Optimized Etsy Product Template</h1>
@@ -12,5 +14,17 @@ const OptimizedTemplate: React.FC = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const seoTitle = 'Your SEO Optimized Title';
+  const seoDescription = 'Your SEO Optimized Description';
+
+  return {
+    props: {
+      seoTitle,
+      seoDescription,
+    },
+  };
+}
 
 export default OptimizedTemplate;
