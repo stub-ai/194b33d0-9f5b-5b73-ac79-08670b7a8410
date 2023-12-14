@@ -24,7 +24,7 @@ const EtsyIntegration: React.FC = () => {
       <h2>Your Etsy Products</h2>
       {products.map((product: any) => (
         <div key={product.listing_id}>
-          <h3>{product.title}</h3>
+          <h3>{product.title}</h3> {/* This is where the product name is fetched */}
           <Image src={product.MainImage.url_570xN} alt={product.title} width={570} height={570} />
           <p>{product.description}</p>
         </div>
