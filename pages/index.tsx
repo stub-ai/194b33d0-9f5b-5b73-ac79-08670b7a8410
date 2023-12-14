@@ -6,6 +6,7 @@ import Login from '../components/Login';
 import Header from '../components/Header';
 import EtsyIntegration from '../components/EtsyIntegration';
 import OptimizeButton from '../components/OptimizeButton';
+import axios from 'axios';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -30,9 +31,9 @@ export default function Home({ productName, productDescription }: HomeProps) {
 }
 
 export async function getStaticProps() {
-  // Replace this with your actual logic to fetch product name and description
-  const productName = 'Your Product Name';
-  const productDescription = 'Your Product Description';
+  // Replace with your actual logic to fetch product name
+  const productName = 'Your Actual Product Name';
+  const productDescription = 'Your Actual Product Description';
 
   return {
     props: {
