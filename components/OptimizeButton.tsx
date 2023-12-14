@@ -19,7 +19,10 @@ const OptimizeButton: React.FC = () => {
       });
 
       if (response.status === 200) {
-        // After creating the template, redirect to the optimized template page
+        // After creating the template, store it in local storage
+        localStorage.setItem('optimizedTemplate', JSON.stringify(response.data));
+
+        // Then, redirect to the optimized template page
         router.push('/optimized-template');
       } else {
         console.error('Failed to create Etsy product template');
