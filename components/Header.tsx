@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-blue-500 text-white p-5 w-full flex items-center justify-between">
-      <h1 className="font-bold text-2xl">Listify</h1>
+    <header className="flex items-center justify-between p-5 w-full bg-blue-500 text-white">
+      <h1 className="text-2xl font-bold">Listify</h1>
       <nav>
         <ul className="flex items-center space-x-4">
           <li><Link href="/"><a className="hover:text-gray-300">Home</a></Link></li>
