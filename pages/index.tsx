@@ -9,9 +9,11 @@ import OptimizeButton from '../components/OptimizeButton'; // Import OptimizeBut
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home() {
-  const productName = 'Your Product Name'; // Replace this with actual product name
+interface HomeProps {
+  productName: string;
+}
 
+export default function Home({ productName }: HomeProps) {
   return (
     <main
       className={`flex items-center justify-between min-h-screen p-24 flex-col ${inter.className}`}
@@ -24,4 +26,15 @@ export default function Home() {
       <OptimizeButton /> {/* Use OptimizeButton */}
     </main>
   );
+}
+
+export async function getStaticProps() {
+  // Replace this with your actual logic to fetch product name
+  const productName = 'Your Product Name';
+
+  return {
+    props: {
+      productName,
+    },
+  };
 }
