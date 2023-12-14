@@ -5,6 +5,8 @@ const OptimizeButton: React.FC = () => {
   const router = useRouter();
 
   const handleOptimize = () => {
+    // Add your logic to create Etsy product template here
+    // After creating the template, redirect to the optimized template page
     router.push('/optimized-template');
   };
 
