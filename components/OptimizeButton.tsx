@@ -2,14 +2,30 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import axios from 'axios';
 
+interface TemplateData {
+  productName: string;
+  productDescription: string;
+  seoTitle?: string;
+  seoDescription?: string;
+}
+
 const OptimizeButton: React.FC = () => {
   const router = useRouter();
 
   const handleOptimize = async () => {
-    // Add your logic to create Etsy product template here
-    const templateData = {
-      // Add your template data here
+    // Define your template data here
+    const templateData: TemplateData = {
+      productName: 'Your Product Name',
+      productDescription: 'Your Product Description',
     };
+
+    // Generate SEO optimized title and description
+    const seoTitle = `${templateData.productName} | Best Product on Etsy`;
+    const seoDescription = `${templateData.productDescription.substring(0, 160)}...`;
+
+    // Update the template data with the SEO optimized title and description
+    templateData.seoTitle = seoTitle;
+    templateData.seoDescription = seoDescription;
 
     try {
       const response = await axios.post('https://openapi.etsy.com/v2/listings', templateData, {
